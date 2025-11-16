@@ -1,4 +1,4 @@
-## <span style="background-color: red; color: white;">1. **Bulud arxitekturası**</span>
+## <mark>1. **Bulud arxitekturası**<mark>
 
 Bulud arxitekturası – bulud hesablama xidmətlərinin (məsələn, serverlər, yaddaş, şəbəkələr) necə qurulduğunu, idarə olunduğunu və istifadəçilərə çatdırıldığını təsvir edən bir plandır (blueprint). Bu, sadəcə avadanlıq yığımı deyil, bu avadanlığın proqram təminatı vasitəsilə necə idarə olunub paylaşıldığını müəyyən edən komponentlər və onların əlaqəsidir.
 
