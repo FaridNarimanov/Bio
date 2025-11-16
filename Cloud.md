@@ -1,5 +1,5 @@
 > [!NOTE]
-> ## 1. **Bulud arxitekturası**
+> ## **1. Bulud arxitekturası**
 
 Bulud arxitekturası – bulud hesablama xidmətlərinin (məsələn, serverlər, yaddaş, şəbəkələr) necə qurulduğunu, idarə olunduğunu və istifadəçilərə çatdırıldığını təsvir edən bir plandır (blueprint). Bu, sadəcə avadanlıq yığımı deyil, bu avadanlığın proqram təminatı vasitəsilə necə idarə olunub paylaşıldığını müəyyən edən komponentlər və onların əlaqəsidir.
 
@@ -114,7 +114,7 @@ Bulud arxitekturasının ən vacib hissəsi, istifadəçiyə nə qədər nəzar�
 Bu, yuxarıdakı modellərin məntiqini genişləndirən bir fəlsəfədir. İndi demək olar ki, hər şey (məsələn, Təhlükəsizlik (SecaaS), Verilənlər Bazas (DBaaS), Şəxsiyyət (IDaaS)) bulud üzərindən xidmət kimi təqdim edilə bilər.
 
 > [!NOTE]
-> ## 2. **IaaS, PaaS, SaaS təhlükəsizlik riskləri və həlləri**==
+> ## **2. IaaS, PaaS, SaaS təhlükəsizlik riskləri və həlləri**
 
 Bulud xidmət modellərində (IaaS, PaaS, SaaS) təhlükəsizlik risklərini və həllərini anlamaq üçün əvvəlcə **"Paylaşılan Məsuliyyət Modeli" (Shared Responsibility Model)** anlayışını bilmək vacibdir. Bu model, təhlükəsizliyin hansı hissəsinə görə bulud provayderinin (məsələn, AWS, Azure), hansı hissəsinə görə isə müştərinin (istifadəçi/təşkilat) cavabdeh olduğunu müəyyən edir.
 
@@ -232,7 +232,7 @@ Gəlin indi hər modelə bu məsuliyyət bölgüsü çərçivəsində baxaq.
 
 
 > [!NOTE]
-> ## 3. **Bulud təhlükəsizliyinin elementləri**==
+> ## **3. Bulud təhlükəsizliyinin elementləri**
 
 Bulud təhlükəsizliyinin "elementləri" dedikdə, adətən bulud mühitini qorumaq üçün istifadə olunan nəzarət mexanizmləri (məsələn, IAM, şəbəkə təhlükəsizliyi, şifrələmə) nəzərdə tutulur. 
 
@@ -331,7 +331,7 @@ Bu model, buludun istənilən formalaşma növlərində (yəni yuxarıdakı amil
 
 
 > [!NOTE]
-> ## **5.Zero Trust modeli**==
+> ## **5. Zero Trust modeli**
 
 Bu cavab iki əsas hissədən ibarətdir: birincisi "Zero Trust" (Sıfır Etibar) modelinin nə olduğunu, ikincisi isə bu modelin hansı təhlükəsizlik siyasətləri vasitəsilə tətbiq edildiyini izah edir.
 
