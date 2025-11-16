@@ -485,3 +485,181 @@ SDP Controller: Bu, sistemin "beynidir". SDP müştərilərini autentifikasiya (
 SDP Gateway: Bu, qorunan resursların (məsələn, serverlərin) qarşısında dayanan bir şlüzdür. O, yalnız Kontrollerdən icazə aldıqdan sonra spesifik SDP Müştərisindən gələn şəbəkə trafikinə nəzarət edir və bu əlaqəni təmin edir. SDP nəzarətçisi ilə qarşılıqlı əlaqədə təhlükəsizlik siyasətlərini tətbiq edir.
 
 Əlaqə: SDP Controller (təhlükəsizlik beyni) kimin hara girə biləcəyinə qərar verir və bu qaydaları tətbiq etmək üçün SDN Controller-ə (şəbəkə beyni) dinamik əmrlər göndərir.
+
+> [!NOTE]
+> ## 8. Riskə Cavab Strategiyaları: Tolerantlıq, Ötürmə və Qalıq Risk
+Bulud mühitində riskləri müəyyən edib qiymətləndirdikdən sonra (məsələn, NIST və ya ISO çərçivəsi ilə), növbəti addım bu risklərə cavab verməkdir. Təşkilatın riskə cavab vermək üçün dörd əsas strategiyası var.
+
+Riskə Cavabın 4 Əsas Strategiyası
+Riski Azaltmaq (Mitigate): Bu, ən çox istifadə olunan strategiyadır. Risk tamamilə aradan qaldırılmır, lakin onun təsiri və ya baş vermə ehtimalı qəbul edilən səviyyəyə endirilir. Sizin mətndə "nəzarət mexanizmləri (məsələn, şifrələmə)" adlanan proses budur.
+
+Riski Ötürmək (Transfer): Riskin maliyyə təsirini üçüncü tərəfə (məsələn, sığorta şirkətinə) köçürmək.
+
+Riski Qəbul Etmək (Accept): Riskin mövcudluğunu bilmək, lakin ona qarşı heç bir tədbir görməmək (çünki riskin təsiri azdır və ya tədbir görmək daha baha başa gəlir).
+
+Riskin Qarşısını Almaq (Avoid): Riski yaradan fəaliyyətdən tamamilə imtina etmək (məsələn, həddən artıq riskli olan bulud xidmətindən istifadə etməmək).
+
+Bu dörd seçimdən hansını edəcəyimizə "Riskə Dözümlülük" səviyyəmizə baxaraq qərar veririk.
+
+Riskə Dözümlülük (Risk Tolerance)
+Tərif: Riskə dözümlülük (və ya "risk iştahı") – təşkilatın rəhbərliyi və maraqlı tərəflərinin öz hədəflərinə çatmaq üçün qəbul etməyə hazır olduğu maksimum risk səviyyəsini göstərir.
+
+Vahid Dəyər Deyil: Bu səviyyə bütün təşkilat üçün eyni deyil; aktivin növündən və dəyərindən asılı olaraq dəyişir. Məsələn, ictimai veb-sayt üçün riskə dözümlülük yüksək, müştərilərin şəxsi məlumat bazası üçün isə çox aşağı olmalıdır.
+
+Aktivlərin Matrisi: Buna görə də, təminatçı haqqında vahid bir "ümumi risk qərarı" vermək düzgün deyil. Qiymətləndirmələr həmişə həmin aktivlərin dəyəri və tələbləri ilə uyğun olmalıdır. Zaman keçdikcə praktiki olaraq, bulud xidmətlərinin və həmin xidmətlərdə yerləşdirilə biləcək aktiv növlərinin bir matrisi qurulur (məsələn, "Həssas məlumatlar yalnız bu təhlükəsiz xidmətdə yerləşə bilər").
+
+Bulud və Tolerantlıq: Çox vacib bir məqam: Buluda keçmək təşkilatın riskə dözümlülüyünü dəyişdirmir, yalnız riskin idarə olunma üsulunu dəyişdirir. Əgər şirkət əvvəl müştəri məlumatlarının sızmasına dözümsüz idisə, buludda da dözümsüz olaraq qalır (sadəcə indi nəzarət vasitələri dəyişir).
+
+Qalıq Risk (Residual Risk)
+Tərif: Qalıq risk – təşkilatın həm bulud provayderinin təmin etdiyi nəzarət tədbirlərini nəzərə aldıqdan, həm də özünün tətbiq etdiyi nəzarət mexanizmlərindən (yəni Riski Azaltmaq strategiyasından) sonra yerdə qalan riskdir.
+
+Qalıq Risk = (Ümumi Risk) – (Tətbiq Edilən Nəzarətlər/Risk Azaltma)
+
+Əgər bütün qiymətləndirmələrdən və sizin tətbiq etdiyiniz nəzarətlərdən sonra hələ də mövcud olan bu qalıq risk, sizin "Riskə Dözümlülük" səviyyənizdən yüksəkdirsə, o zaman digər strategiyalara baxmalısınız.
+
+Riskin Ötürülməsi (Risk Transfer)
+Bu, qalıq risk çox yüksək olduqda istifadə edilən strategiyalardan biridir.
+
+Necə İşləyir: Çox vaxt kiber-sığorta vasitəsilə həyata keçirilir. Təşkilat riski tamamilə aradan qaldırmır, lakin onun maliyyə nəticələrini başqa bir tərəfə ötürür.
+
+İdeal Mexanizm Deyil: Bu, xüsusilə informasiya riskləri üçün tamamilə ideal bir mexanizm deyil. Səbəb:
+
+Birinci Dərəcəli İtkilər: Sığorta, əsas (birinci dərəcəli) itki hadisəsi ilə əlaqəli bəzi maliyyə itkilərini (məsələn, araşdırma xərcləri, cərimələr) kompensasiya edə bilər.
+
+İkinci Dərəcəli İtkilər: Lakin sığorta adətən ikinci dərəcəli itki hadisələrinə (məsələn, hücum nəticəsində itirilən müştərilər) kömək etməyəcək. Xüsusilə qeyri-maddi və ya ölçülməsi çətin olan itkiləri (məsələn, brendə dəyən nüfuzun zədələnməsi) sığorta ilə qarşılamaq demək olar ki, mümkün deyil.
+
+Beləliklə, proses belədir: Riski qiymətləndirirsiniz, tolerantlığınıza baxırsınız, onu azaltmağa çalışırsınız və yerdə qalan (qalıq) risk hələ də çoxdursa, onu ötürməyi (sığorta) və ya tamamilə qəbul etməyi seçirsiniz.
+
+> [!NOTE]
+> ## 9. Buludda Müqavilələr: SLA, DPA, NDA və Digər Komponentlər
+Provayder ilə müştəri arasında münasibətlər, təklif olunan xidmət və müştərinin tələblərinə əsaslanan hüquqi müqavilələr toplusu ilə tənzimlənir. İctimai bulud hesablama müqavilələri çox vaxt "standart şərtlər müqaviləsi" (və ya Master Service Agreement - MSA) kimi təsnif edilir. Bu o deməkdir ki, müqavilələrin şərtləri (xüsusilə kiçik müştərilər üçün) dəyişdirilə bilməyən şəkildə təqdim olunur və müştəri xidmətlərə çıxış əldə etmək üçün bütün şərtləri qəbul etməlidir.
+
+Bu əsas müqavilə adətən bir neçə vacib əlavə və ya sənədlə tamamlanır:
+
+1. Service Level Agreement (SLA) - Xidmət Səviyyəsi Müqaviləsi
+Bu, bulud müqaviləsinin ən fundamental texniki komponentidir. SLA provayderin təqdim etdiyi xidmətin keyfiyyət və əlçatanlıq zəmanətlərini müəyyən edir.
+
+Əhatə etdiyi məsələlər:
+
+Əlçatanlıq (Uptime): Xidmətin neçə faiz əlçatan olacağına dair zəmanət (məsələn, 99.9% və ya "üç doqquz").
+
+Performans: Xidmətin hansı sürətlə (məsələn, yaddaş diskinin IOPS göstəricisi) cavab verəcəyi.
+
+Cərimələr (Service Credits): Əgər provayder bu zəmanətləri (məsələn, 99.9%-i) təmin edə bilməsə, müştəriyə nə qədər kompensasiya (adətən növbəti ayın fakturasında endirim) ödəyəcəyi.
+
+2. DPA – Data Processing Agreement (Məlumatların Emalı Müqaviləsi)
+SLA xidmətin işləməsinə, DPA isə xidmətin məlumatları necə qorumasına fokuslanır. Bu, şəxsi məlumatların bulud provayderi tərəfindən necə toplanacağı, saxlanacağı və emal ediləcəyini müəyyən edən hüquqi sənəddir.
+
+Məqsədi: Müştərinin şəxsi məlumatlarının gizliliyini və qanuni qorunmasını təmin etmək. Xüsusilə GDPR (General Data Protection Regulation) kimi beynəlxalq məlumat qoruma qanunlarına uyğunluğu təmin etmək üçün bu müqavilə kritik əhəmiyyət daşıyır.
+
+DPA-nın əsas maddələri:
+
+Məlumatların emalı məqsədi və müddəti.
+
+Məlumatların hansı üçüncü tərəflərlə (sub-processorlar) paylaşılacağı.
+
+Məlumatların silinməsi, arxivləşdirilməsi və ya geri qaytarılması qaydaları.
+
+Məlumat pozuntusu (data breach) halında bildiriş qaydası.
+
+Provayderin məlumatları qorumaq üçün tətbiq etdiyi texniki və təşkilati tədbirlər (məsələn, şifrələmə, girişə nəzarət).
+
+3. NDA – Non-Disclosure Agreement (Gizlilik Müqaviləsi)
+Bu müqavilə təkcə şəxsi məlumatları deyil, həm də təşkilatın kommersiya sirlərini qoruyur. NDA, tərəflər arasında məxfi məlumatların qorunmasını təmin edən hüquqi müqavilədir.
+
+Məqsədi: Bulud xidmətləri zamanı şirkətlər provayderlərlə (və ya bulud mühitində) öz daxili sistemləri, biznes strategiyaları, maliyyə məlumatları və müştəri məlumatlarını paylaşa bilər. NDA bu məlumatların rəqiblərə və ya ictimaiyyətə sızmasının qarşısını almaq üçün bağlanır.
+
+NDA-nın əsas hissələri:
+
+Gizli məlumatın tərifi (nə məxfi hesab olunur).
+
+Gizli məlumatın paylaşılmasına icazə verilən hallar.
+
+Gizliliyin pozulması halında hüquqi məsuliyyət və cərimələr.
+
+4. Incident Response Agreement (Hadisələrə Cavab Müqaviləsi)
+Bu, çox vaxt ayrı bir sənəd deyil, DPA və ya SLA-nın daxilində mühüm bir bölmədir. Bu müqavilə kiberhücum, məlumat pozuntusu və ya texniki nasazlıq baş verdikdə, tərəflərin (müştəri və provayder) hansı tədbirləri görəcəyini və necə əməkdaşlıq edəcəyini dəqiq müəyyən edir.
+
+Əhatə etdiyi məsələlər:
+
+Hadisə aşkarlandıqdan sonra müştəriyə xəbərdarlıq müddəti (məsələn, DPA-da "72 saat ərzində" kimi).
+
+Kimlərin məsul olduğu və cavabdehlik bölgüsü (Paylaşılan Məsuliyyət Modelinə əsasən).
+
+Bərpa planı (Disaster Recovery Plan) və xidmətlərin bərpası üçün gözlənilən müddətlər.
+
+Hadisənin araşdırılması (forensics) zamanı hansı tərəfin hansı məlumatları (logları) təmin edəcəyi və hesabatın necə təqdim olunacağı.
+
+> [!NOTE]
+> ## 10. Service Level Agreement (SLA) - Xidmət Səviyyəsi Müqaviləsi
+Xidmət Səviyyəsi Müqaviləsi (SLA) – müştəri ilə bulud provayderi arasında bağlanan, təqdim olunan xidmətlərin spesifik keyfiyyətini və performansını qiymətləndirmək üçün istifadə olunan rəsmi müqavilədir.
+
+O, xidmətlərin göstərilməsi üçün ölçü meyarlarını (metriklər) müəyyən edir və provayderin bu müqavilə öhdəliklərini yerinə yetirməməsi (müqavilə pozuntusu) halında nə baş verəcəyini təsvir edir. Bu nəticə, adətən, "Service Credits" (Xidmət Kreditləri) adlanır – yəni provayder vəd etdiyi səviyyəni təmin edə bilmədikdə, müştəriyə kompensasiya (növbəti ayın fakturasında endirim) ödəyir.
+
+SLA-lar iki əsas növ göstəriciyə bölünür: Kəmiyyət və Keyfiyyət.
+
+1. Kəmiyyət Göstəriciləri (Quantitative Metrics)
+Bunlar birbaşa ölçülə bilən, rəqəmlərlə ifadə olunan texniki vədlərdir.
+
+İşləmə vaxtı (Uptime) / Dayanma vaxtı (Downtime): Xidmətin əlçatan olacağına dair faizlə zəmanət (məsələn, 99.95% uptime).
+
+Gecikmə müddəti (Latency): Bir sorğunun göndərilməsi ilə cavabın alınması arasında keçən maksimum müddət (məsələn, 50 milisaniyədən az).
+
+Məlumatların saxlanmasının davamlılığı (Durability): Məlumatların itirilməməsinə dair zəmanət (məsələn, 99.999999999% - "on bir doqquz").
+
+Məlumatların saxlanma tutumu: Müştəriyə ayrılmış müəyyən yaddaş həcmi və ya proqram üçün ayrılmış yaddaş.
+
+Dəstək xidmətləri: Texniki dəstəyə müraciət edildikdə cavab verilməsinə dair zaman çərçivəsi (məsələn, "kritik problem üçün 1 saat ərzində cavab").
+
+2. Keyfiyyət Göstəriciləri (Qualitative Metrics)
+Bunlar rəqəmlərlə ölçülməyən, lakin provayderin yerinə yetirməyi öhdəsinə götürdüyü siyasətə əsaslanan vədlərdir.
+
+Məlumatların saxlanma yeri tələbləri: Provayderin məlumatlarınızı yalnız sizin seçdiyiniz coğrafi regionda (məsələn, yalnız Avropa Birliyi daxilində) saxlayacağına dair zəmanət.
+
+Təhlükəsizlik və Məxfilik: Məlumatların qorunması/məxfiliyi üçün hansı təhlükəsizlik standartlarına (məsələn, ISO 27001) əməl ediləcəyi.
+
+Məlumatların silinməsi: Müqavilə bitdikdən sonra məlumatlarınızın nə qədər müddətə və necə təhlükəsiz şəkildə silinəcəyinə dair vəd.
+
+Daşıma imkanları (Portability): Müqavilə bitdikdə məlumatlarınızı sistemdən hansı formatda və necə çıxara biləcəyiniz.
+
+Kəmiyyət və Keyfiyyətin Qiymətləndirilməsi (Nümunələr)
+Bəzi xidmət aspektləri hər iki baxımdan qiymətləndirilə bilər:
+
+Elastiklik/Miqyaslana bilmə:
+
+Kəmiyyət: Bir virtual maşın üçün mövcud olan maksimum resurslar (məsələn, 128 CPU, 2TB RAM).
+
+Keyfiyyət: Məlumatın həssaslığına uyğun olaraq (məsələn, maliyyə məlumatı) xüsusi təhlükəsizlik tədbirləri tətbiq edilmiş mühitdə miqyaslanma təminatı.
+
+Şifrələmə (Encryption):
+
+Kəmiyyət: İstifadə olunan şifrələmə alqoritminin bit dəyəri ilə ölçülməsi (məsələn, AES-256).
+
+Keyfiyyət: Provayderin məlumatı həm ötürülmə zamanı (in-transit), həm də saxlanma zamanı (at-rest) şifrələnmiş olmasını təmin etməsi vədidir.
+
+3. İnfrastruktur SLA-ları və Elastik Xidmətlər
+SLA-ları (xüsusilə uptime və performansı) qorumaq üçün bulud xidmətləri elastik olmalı, yəni tələbata uyğun dinamik olaraq miqyaslanmalıdır. IaaS provayderi xidmətin müqavilə daxilində bu elastikliyi təmin edəcəyini öhdəsinə götürür.
+
+İstifadəçi təcrübəsini qorumaq və riskləri azaltmaq məqsədilə İnfrastruktur SLA-ları təqdim olunur. Bu SLA-lar müştərilərə (və ya bəzən bir xidmət təminatçısı ilə onun üzərində işlədiyi IaaS təminatçısı arasında) resursların təmin olunacağına dair qanuni zəmanət verir. Xidmətlər ətraf mühitin şərtlərinə (məsələn, istifadəçi sayının artması) uyğun resurs tələblərini dəyişdikdə, provayder resursları müqavilədə göstərilən ehtimalla təmin etməlidir.
+
+İnfrastruktur SLA-larının üç fərqli yanaşması mövcuddur:
+
+SLA olmayan xidmətlər (No SLAs):
+
+Fərziyyə: Ən ucuz variantdır. Əsas fərziyyə odur ki, bulud "limitsizdir" və həmişə tələb olunduqda əlavə resurs mövcuddur. Provayder heç bir zəmanət vermir.
+
+Ehtimallı SLA-lar (Probabilistic SLAs):
+
+Fərziyyə: Bu, ən çox yayılmış modeldir. Bu SLA-lar resurs mövcudluğu ilə istifadə xərci arasında bir ticarət etməyə imkan verir.
+
+Necə işləyir: SLA müqaviləsi müəyyən resursların mövcudluq faizini (məsələn, 99.9%) SLA qiymətləndirmə dövrü ərzində göstərir.
+
+Nəticə: Mövcudluq faizi nə qədər aşağıdırsa (məsələn, 99.0% vs 99.99%), resurs istifadəsinin xərci də o qədər ucuz olur. Bu SLA növü kiçik və orta bizneslər və bir çox müəssisə səviyyəli tətbiqlər üçün uyğundur.
+
+Deterministik SLA-lar (Deterministic SLAs):
+
+Fərziyyə: Əslində ehtimallı SLA-ların resurs mövcudluğu faizi 100% olan variantıdır.
+
+Necə işləyir: Provayder resursların hər zaman əlçatan olacağına dair tam zəmanət verir.
+
+Nəticə: Bu, ən sərt və zəmanət verilməsi ən çətin SLA-lardır. Provayder baxımından bu resursların başqaları ilə paylaşdırılması mümkün deyil (çünki həmişə ehtiyatda saxlanmalıdır), buna görə də ən bahalı seçimdir. Yalnız çox kritikal xidmətlər (məsələn, həyati təhlükəsizlik sistemləri) üçün tətbiq oluna bilər.
