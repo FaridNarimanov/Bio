@@ -448,3 +448,40 @@ Fokus: NIST çərçivəsi (xüsusilə RMF) daha çox ABŞ hökuməti və İT tə
 Universallıq: ISO 31000 beynəlxalq səviyyədə tətbiq olunan universal bir standartdır və istənilən növ təşkilat və istənilən növ risk üçün nəzərdə tutulub. Daha çox prinsiplərə əsaslanır (daha çevikdir).
 
 Təşkilatlar, öz tələblərinə, coğrafi yerləşməsinə və fəaliyyət göstərdiyi sənayeyə uyğun olaraq, hər iki çərçivənin müvafiq aspektlərini tətbiq etməli və ya birini seçməlidirlər.
+
+
+> [!NOTE]
+> ## 7. Software Defined Networking (SDN) və Software Defined Perimeter (SDP)
+Bu cavab iki hissədən ibarətdir: Birincisi, müasir bulud şəbəkələrini mümkün edən SDN texnologiyası, ikincisi isə bu texnologiyaya əsaslanan SDP təhlükəsizlik modelidir.
+
+1. Software Defined Networking (SDN) - Proqram Təminatı ilə Müəyyən Edilən Şəbəkə
+Bu gün bulud sahəsində ən çox rast gəlinən şəbəkə virtualizasiyası SDN-dir. Bu, şəbəkə avadanlıqları (marşrutlaşdırıcılar, kommutatorlar) üzərində tam abstraksiya (abstraction) qatı təmin edən bir yanaşmadır.
+
+SDN texnologiyasının əsas innovasiyası, şəbəkənin iki əsas funksiyasını bir-birindən ayırmasıdır:
+
+İdarəetmə Səviyyəsi (Control Plane): Bu, şəbəkənin "beynidir". Trafikin haradan hara gedəcəyinə dair qərarları verir, siyasətləri müəyyən edir.
+
+Məlumat Ötürmə Səviyyəsi (Data Plane): Bu, şəbəkənin "əzələsidir". O, "beyindən" gələn əmrləri icra edir və məlumat paketlərini fiziki olaraq bir nöqtədən digərinə ötürür.
+
+Ənənəvi avadanlıqda bu iki səviyyə eyni qutunun içində olurdu. SDN bu səviyyələri ayırır, idarəetməni mərkəzləşdirilmiş bir "kontrollerə" verir. Bu yanaşma, şəbəkəni ənənəvi LAN məhdudiyyətlərindən azad edir və aşağıdakı çevik idarəetmə imkanlarını yaradır:
+
+İstənilən IP Diapazonlarının Proqramlaşdırılması: SDN-lər istənilən IP diapazonlarının proqram vasitəsilə təyin olunmasına imkan verir. Məsələn, müştəriyə 10.0.0.0/16 (CIDR – Classless Inter-Domain Routing) diapazonu lazım olarsa, SDN provayderin əsas şəbəkə ünvanlamasından asılı olmayaraq bunu müştəri üçün virtual olaraq təmin edə bilir. Bu, müştərilərə mövcud (on-premise) şəbəkələrini dəyişdirmədən bulud mühitinə rahat şəkildə genişləndirməyə şərait yaradır.
+
+Çoxistifadəli Mühit (Multi-tenancy) Dəstəyi: SDN texnologiyası, fərqli müştərilərin bir-birindən tam izolyasiya olunmuş şəkildə eyni fiziki infrastrukturda işləməsinə şərait yaradır. Bu izolyasiya o qədər güclüdür ki, hətta eyni daxili IP ünvan bloklarından istifadə edən bir neçə müştərini (məsələn, həm Müştəri A, həm də Müştəri B öz 192.168.1.0/24 şəbəkəsini istifadə edə bilər) dəstəkləyir.
+
+Mikroseqmentasiya (Microsegmentation): SDN-in bu çevikliyi həm də mikroseqmentasiya adlanan güclü bir təhlükəsizlik texnikasına imkan verir. Mikroseqmentasiya – virtual şəbəkə topologiyalarından istifadə edərək daha çox, daha kiçik və daha izolə olunmuş şəbəkələrin (və ya hətta fərdi serverlərin) yaradılmasıdır. Bu, təşkilat daxilində bir serverdən digərinə icazəsiz hərəkəti (Lateral Movement) məhdudlaşdırmaq üçün kritikdir.
+
+2. Software Defined Perimeter (SDP) - Proqram Təminatı ilə Müəyyən Edilən Perimetr
+Əgər SDN şəbəkənin infrastrukturudursa, SDP həmin infrastruktur üzərində qurulan təhlükəsizlik modelidir. Bu, birbaşa "Zero Trust" (Sıfır Etibar) fəlsəfəsini tətbiq edir.
+
+SDP-nin məqsədi "qala və xəndək" modelini (yəni etibarlı daxili şəbəkə) aradan qaldırmaqdır. SDP modelində, bir istifadəçi şəbəkəyə qoşulmaqla heç bir şeyə giriş əldə etmir. Model, qurğuların və istifadəçilərin əvvəlcə autentifikasiyasını (tanınmasını) tələb edir və yalnız bundan sonra həmin istifadəçi/cihaz üçün fərdi olaraq resurslara dinamik şəkildə şəbəkə çıxışı təmin edir.
+
+SDP üç əsas komponentdən ibarətdir:
+
+SDP Client: Qoşulan cihazda (məsələn, işçinin noutbukunda) yerləşən proqram komponentidir. Bu, istifadəçinin kimliyini və cihazın vəziyyətini Kontrollerə bildirir.
+
+SDP Controller: Bu, sistemin "beynidir". SDP müştərilərini autentifikasiya (kimlik yoxlaması, məsələn, parol + MFA) və avtorizasiya (həmin istifadəçinin hansı serverlərə giriş icazəsi olduğunu yoxlama) edir. Daha sonra, Kontroller həm Müştəriyə, həm də Şlüzə bu əlaqəni qurmağı tapşırır.
+
+SDP Gateway: Bu, qorunan resursların (məsələn, serverlərin) qarşısında dayanan bir şlüzdür. O, yalnız Kontrollerdən icazə aldıqdan sonra spesifik SDP Müştərisindən gələn şəbəkə trafikinə nəzarət edir və bu əlaqəni təmin edir. SDP nəzarətçisi ilə qarşılıqlı əlaqədə təhlükəsizlik siyasətlərini tətbiq edir.
+
+Əlaqə: SDP Controller (təhlükəsizlik beyni) kimin hara girə biləcəyinə qərar verir və bu qaydaları tətbiq etmək üçün SDN Controller-ə (şəbəkə beyni) dinamik əmrlər göndərir.
