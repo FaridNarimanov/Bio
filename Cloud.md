@@ -1,4 +1,5 @@
-## [!NOTE]>1. **Bulud arxitekturası**
+> [!NOTE]
+> ## 1. **Bulud arxitekturası**
 
 Bulud arxitekturası – bulud hesablama xidmətlərinin (məsələn, serverlər, yaddaş, şəbəkələr) necə qurulduğunu, idarə olunduğunu və istifadəçilərə çatdırıldığını təsvir edən bir plandır (blueprint). Bu, sadəcə avadanlıq yığımı deyil, bu avadanlığın proqram təminatı vasitəsilə necə idarə olunub paylaşıldığını müəyyən edən komponentlər və onların əlaqəsidir.
 
