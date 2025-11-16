@@ -399,3 +399,52 @@ Bu siyasətlər məqsədlərinə görə əsasən dörd növə bölünür:
         
 
 Beləliklə, təşkilat rəhbərliyi "İdarəetmə Siyasəti"ndə Zero Trust-ı hədəf olaraq təyin edir, "Normativ Siyasət"lər bunu məcbur edə bilər və "Məlumatlandırıcı Siyasət"lər işçilərə bunun səbəbini izah edir.
+
+> [!NOTE]
+> ## ** 6. Bulud Üçün Risk İdarəetmə Modelləri: NIST və ISO
+Risk İdarəetmə Çərçivəsi (Risk Management Framework - RMF) – təşkilatların təhlükəsizlik risklərini müəyyən etmək, qiymətləndirmək və idarə etmək üçün istifadə etdiyi sistemli və davamlı bir prosesdir. Bulud mühitində bu, xüsusilə vacibdir, çünki nəzarətin bir hissəsi (fiziki infrastruktur) provayderə ötürülür.
+
+İstifadə edilən əsas risk idarəetmə çərçivələri arasında ABŞ-ın NIST (Milli Standartlar və Texnologiyalar İnstitutu) və beynəlxalq ISO (Beynəlxalq Standartlaşdırma Təşkilatı) standartları mövcuddur. Hər iki modelin əsas məqsədi risklərin sistemli idarə edilməsidir, lakin yanaşmalarında fərqlər var.
+
+1. NIST Risk İdarəetmə Çərçivəsi (RMF)
+NIST çərçivəsi (xüsusilə NIST SP 800-37) təhlükəsizlik tədbirlərinin sistemli şəkildə tətbiq edilməsi üçün ABŞ-da (və dünyada) geniş istifadə olunan bir modeldir. Bu, davamlı bir dövrdür (cycle) və bulud mühitində risklərin idarə olunması üçün aşağıdakı əsas mərhələlərdən ibarətdir:
+
+Risklərin Tanınması (Categorize & Select):
+
+İzahı: Bu mərhələdə təşkilat "Nəyi qoruyuruq?" sualına cavab verir. Bulud mühitində mövcud olan bütün aktivlər (məlumatlar, tətbiqlər, virtual maşınlar), zəifliklər (məsələn, konfiqurasiya səhvləri) və təhlükələr (məsələn, icazəsiz giriş) müəyyən edilir. Bulud kontekstində bu, Paylaşılan Məsuliyyət Modelini anlamağı tələb edir.
+
+Risklərin Qiymətləndirilməsi (Assess):
+
+İzahı: Bu mərhələdə tanınmış risklərin təsiri (bu risk baş versə, nə qədər zərər dəyəcək?) və ehtimalı (baş vermə ehtimalı nə qədərdir?) qiymətləndirilir. Məsələn, "Həssas məlumat olan S3 vedrəsinin (bucket) ictimaiyyətə açıq olması" riskinin təsiri "çox yüksək" qiymətləndirilir. Qiymətləndirmə, risklərin prioritetləşdirilməsi və hansının daha ciddi olduğunu müəyyən etməyə kömək edir.
+
+Risklərin İdarə Edilməsi (Respond):
+
+İzahı: NIST çərçivəsi, riskə cavab vermək üçün dörd əsas strategiya təklif edir: Riski azaltmaq (məsələn, firewall və ya şifrələmə kimi təhlükəsizlik tədbirləri tətbiq etmək), Riski ötürmək (məsələn, kiber-sığorta almaq və ya məsuliyyəti müqavilə ilə bulud provayderinə yönəltmək), Riskdən qaçmaq (məsələn, həddən artıq riskli olan bulud xidmətindən istifadə etməmək) və ya Riski qəbul etmək (risk azdırsa və onu düzəltmək xərci faydasından çoxdursa). Bu tədbirlər arasında təhlükəsizlik siyasətləri, texnoloji tədbirlər və digər idarəetmə strategiyaları yer alır.
+
+Risklərin Monitorinqi (Monitor):
+
+İzahı: Risk idarəetməsi birdəfəlik deyil, davamlı bir prosesdir. Risklərin mütəmadi olaraq izlənməsi (tətbiq edilən nəzarətlər hələ də işləyirmi?) və yeni risklərin (məsələn, yeni bir bulud zəifliyi) aşkar edilməsi üçün davamlı monitorinq həyata keçirilir. Bu, təşkilatın təhlükəsizlik vəziyyətini mütəmadi olaraq qiymətləndirməyə kömək edir.
+
+2. ISO 31000 Risk İdarəetmə Modeli
+ISO 31000, risklərin idarə olunması üçün beynəlxalq səviyyədə tanınan universal bir standartdır. O, yalnız İT və ya bulud deyil, istənilən növ (maliyyə, strateji, təhlükəsizlik) riskin idarə olunması üçün prinsiplər və təlimatlar təqdim edir. ISO 31000-in bulud mühitlərinə tətbiqi də NIST-ə bənzər bir proses izləyir, lakin terminologiyada kiçik fərqlər var:
+
+Risklərin Tanınması (Identification): (NIST ilə eynidir) - Nəyin baş verə biləcəyinin, harada və nə vaxt baş verə biləcəyinin müəyyən edilməsi.
+
+Risklərin Analizi (Analysis): (NIST-in "Qiymətləndirmə"sinin bir hissəsi) - Tanınan riskin təbiətini, ehtimalını və nəticələrini (təsirini) anlamaq.
+
+Risklərin Qiymətləndirilməsi (Evaluation): (NIST-in "Qiymətləndirmə"sinin digər hissəsi) - Analiz nəticələrini risk kriteriyaları ilə müqayisə edərək, hansı risklərin idarə edilməsinə ehtiyac olduğunu prioritetləşdirmək.
+
+Risklərin İdarə Edilməsi (Treatment): (NIST ilə eynidir) - Riski azaltmaq, ötürmək, qəbul etmək və ya ondan qaçmaq üçün tədbirlər seçmək və tətbiq etmək.
+
+Monitorinq və Yeniləmə (Monitoring and Review): (NIST ilə eynidir) - Prosesin və nəticələrin davamlı olaraq yoxlanılması və yenilənməsi.
+
+Müqayisə: NIST vs. ISO
+Hər iki çərçivə risklərin sistemli şəkildə idarə edilməsi, təhlükəsizlik tədbirlərinin tətbiqi və davamlı monitorinqi təmin edir. Onların tətbiqi bulud təhlükəsizliyinin artırılması üçün vacibdir.
+
+Əsas fərqlər:
+
+Fokus: NIST çərçivəsi (xüsusilə RMF) daha çox ABŞ hökuməti və İT təhlükəsizliyi ehtiyaclarına yönəlib və daha təlimatverici (prescriptive) xarakter daşıyır (nə etməli olduğunu daha detallı deyir).
+
+Universallıq: ISO 31000 beynəlxalq səviyyədə tətbiq olunan universal bir standartdır və istənilən növ təşkilat və istənilən növ risk üçün nəzərdə tutulub. Daha çox prinsiplərə əsaslanır (daha çevikdir).
+
+Təşkilatlar, öz tələblərinə, coğrafi yerləşməsinə və fəaliyyət göstərdiyi sənayeyə uyğun olaraq, hər iki çərçivənin müvafiq aspektlərini tətbiq etməli və ya birini seçməlidirlər.
