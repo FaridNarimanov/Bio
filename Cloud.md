@@ -401,7 +401,7 @@ Bu siyasətlər məqsədlərinə görə əsasən dörd növə bölünür:
 Beləliklə, təşkilat rəhbərliyi "İdarəetmə Siyasəti"ndə Zero Trust-ı hədəf olaraq təyin edir, "Normativ Siyasət"lər bunu məcbur edə bilər və "Məlumatlandırıcı Siyasət"lər işçilərə bunun səbəbini izah edir.
 
 > [!NOTE]
-> ## ** 6. Bulud Üçün Risk İdarəetmə Modelləri: NIST və ISO
+> ## 6. Bulud Üçün Risk İdarəetmə Modelləri: NIST və ISO
 Risk İdarəetmə Çərçivəsi (Risk Management Framework - RMF) – təşkilatların təhlükəsizlik risklərini müəyyən etmək, qiymətləndirmək və idarə etmək üçün istifadə etdiyi sistemli və davamlı bir prosesdir. Bulud mühitində bu, xüsusilə vacibdir, çünki nəzarətin bir hissəsi (fiziki infrastruktur) provayderə ötürülür.
 
 İstifadə edilən əsas risk idarəetmə çərçivələri arasında ABŞ-ın NIST (Milli Standartlar və Texnologiyalar İnstitutu) və beynəlxalq ISO (Beynəlxalq Standartlaşdırma Təşkilatı) standartları mövcuddur. Hər iki modelin əsas məqsədi risklərin sistemli idarə edilməsidir, lakin yanaşmalarında fərqlər var.
