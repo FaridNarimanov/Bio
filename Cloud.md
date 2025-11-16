@@ -113,7 +113,8 @@ Bulud arxitekturasının ən vacib hissəsi, istifadəçiyə nə qədər nəzar�
 
 Bu, yuxarıdakı modellərin məntiqini genişləndirən bir fəlsəfədir. İndi demək olar ki, hər şey (məsələn, Təhlükəsizlik (SecaaS), Verilənlər Bazas (DBaaS), Şəxsiyyət (IDaaS)) bulud üzərindən xidmət kimi təqdim edilə bilər.
 
-## ==2. **IaaS, PaaS, SaaS təhlükəsizlik riskləri və həlləri**==
+> [!NOTE]
+> ## 2. **IaaS, PaaS, SaaS təhlükəsizlik riskləri və həlləri**==
 
 Bulud xidmət modellərində (IaaS, PaaS, SaaS) təhlükəsizlik risklərini və həllərini anlamaq üçün əvvəlcə **"Paylaşılan Məsuliyyət Modeli" (Shared Responsibility Model)** anlayışını bilmək vacibdir. Bu model, təhlükəsizliyin hansı hissəsinə görə bulud provayderinin (məsələn, AWS, Azure), hansı hissəsinə görə isə müştərinin (istifadəçi/təşkilat) cavabdeh olduğunu müəyyən edir.
 
@@ -230,7 +231,8 @@ Gəlin indi hər modelə bu məsuliyyət bölgüsü çərçivəsində baxaq.
         - **Monitorinq və Müdaxilə Aşkarlanması:** Hər hansı anormal fəaliyyəti və təhdidləri erkən aşkarlamaq üçün **IDPS (Müdaxilə Aşkarlama və Qarşısının Alınması Sistemləri)** kimi monitorinq sistemlərinin istifadəsi vacibdir.
 
 
-## ==3. **Bulud təhlükəsizliyinin elementləri**==
+> [!NOTE]
+> ## 3. **Bulud təhlükəsizliyinin elementləri**==
 
 Bulud təhlükəsizliyinin "elementləri" dedikdə, adətən bulud mühitini qorumaq üçün istifadə olunan nəzarət mexanizmləri (məsələn, IAM, şəbəkə təhlükəsizliyi, şifrələmə) nəzərdə tutulur. 
 
@@ -288,7 +290,8 @@ Bulud təhlükəsizliyinin "elementləri" dedikdə, adətən bulud mühitini qor
 Gördüyünüz kimi, Gartner-in 2008-ci ildə qaldırdığı bu 7 məsələ, bu günün bulud təhlükəsizlik arxitekturasının təməl prinsiplərinə çevrilib.
 
 
-## ==4. Bulud Kub Modeli==
+> [!NOTE]
+> ## **4. Bulud Kub Modeli**
 
 Bulud Kub Modeli bulud hesablama mühitlərini təsnifləşdirmək və onların təhlükəsizlik aspektlərini anlamaq üçün bir konseptual çərçivədir. Modelin əsas məqsədi, təhlükəsiz bulud hesablamaları üçün **standartlaşdırmaya əsas yaratmaq** olmuşdur.
 
@@ -327,7 +330,8 @@ Bu model, buludun istənilən formalaşma növlərində (yəni yuxarıdakı amil
 5. **Yol Xəritəsi Təqdim Etmək:** Bulud mühitini daha təhlükəsiz etmək və bu sahədə daha ətraflı araşdırmalar aparmaq üçün bir yol xəritəsi (metodologiya) təqdim etmək.
 
 
-## ==**5.Zero Trust modeli**==
+> [!NOTE]
+> ## **5.Zero Trust modeli**==
 
 Bu cavab iki əsas hissədən ibarətdir: birincisi "Zero Trust" (Sıfır Etibar) modelinin nə olduğunu, ikincisi isə bu modelin hansı təhlükəsizlik siyasətləri vasitəsilə tətbiq edildiyini izah edir.
 
