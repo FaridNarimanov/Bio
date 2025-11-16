@@ -663,3 +663,177 @@ Fərziyyə: Əslində ehtimallı SLA-ların resurs mövcudluğu faizi 100% olan 
 Necə işləyir: Provayder resursların hər zaman əlçatan olacağına dair tam zəmanət verir.
 
 Nəticə: Bu, ən sərt və zəmanət verilməsi ən çətin SLA-lardır. Provayder baxımından bu resursların başqaları ilə paylaşdırılması mümkün deyil (çünki həmişə ehtiyatda saxlanmalıdır), buna görə də ən bahalı seçimdir. Yalnız çox kritikal xidmətlər (məsələn, həyati təhlükəsizlik sistemləri) üçün tətbiq oluna bilər.
+
+> [!NOTE]
+> ## 11. Bulud Təhlükəsizliyi Standartları və Tənzimləmələri
+Standartların Rolu
+Standartlar bulud təhlükəsizliyinin təməlidir. Onlar şirkətlərə iki əsas məqsəd üçün xidmət edir:
+
+Şablon Təmin Etmək: Bulud əsaslı məlumat və xidmətləri effektiv şəkildə qorumaq üçün strukturlaşdırılmış bir yol və möhkəm təhlükəsizlik infrastrukturu qurmaq üçün bir şablon rolunu oynayır (Məsələn, NIST və ISO kimi çərçivələr).
+
+Uyğunluğu Təmin Etmək: Maliyyə (PCI DSS) və səhiyyə (HIPAA) kimi həssas sənayelər, müvafiq standartlara riayət etməklə tənzimləyici tələbləri (qanunları) yerinə yetirirlər.
+
+Həmçinin, standartlara əsaslanan ətraflı bir cavab planı (Incident Response Plan) hazırlamaq, hər hansı bir insident zamanı zərəri azaltmağa və sürətli bərpanı təmin etməyə kömək edir.
+
+Əsas Standartlar və Tənzimləmələr
+Bulud mühitindəki standartları və tənzimləmələri üç əsas qrupa bölmək olar:
+
+1. Təhlükəsizlik Çərçivələri (Necə etməli?)
+Bunlar təhlükəsizlik sistemini qurmaq üçün ən yaxşı təcrübələri (best practices) və nəzarətləri təqdim edən bələdçilərdir.
+
+ISO/IEC 27017:
+
+Birbaşa bulud xidmətləri ilə bağlı informasiya təhlükəsizliyinə yönəlmiş bir bələdçidir.
+
+Həm bulud provayderi, həm də bulud müştərisi üçün spesifik nəzarətlər təklif edir.
+
+Ən əsası, Paylaşılan Məsuliyyət Modelinə uyğun olaraq rolların və məsuliyyətlərin aydın müəyyən edilməsini təşviq edir.
+
+NIST 800-53:
+
+ABŞ-ın Milli Standartlar və Texnologiyalar İnstitutu (NIST) tərəfindən informasiya sistemləri üçün hazırlanmış geniş bir təhlükəsizlik nəzarətləri toplusudur (kataloqudur).
+
+Əvvəlcə ABŞ hökuməti üçün hazırlansa da, prinsipləri universal olaraq bütün dünyada təhlükəsizlik çərçivəsi qurmaq üçün tətbiq olunur.
+
+2. Audit Hesabatları (Necə sübut etməli?)
+Bunlar, bir təşkilatın öz təhlükəsizlik nəzarətlərinin effektivliyini sübut etmək üçün kənar auditorlara hazırlatdığı hesabatlardır.
+
+SOC Hesabatları (System and Organization Controls):
+
+Bulud təminatçılarının xidmətlərinin müştəri məlumatlarının qorunmasında nə dərəcədə effektiv olduğunu qiymətləndirir.
+
+SOC 1: Provayderin nəzarətlərinin müştərinin maliyyə hesabatlarının düzgünlüyünə təsiri ilə bağlıdır.
+
+SOC 2: Ən çox yayılmış bulud hesabatıdır. Provayderin nəzarətlərini 5 "Etibar Xidməti Kriteriyası" (Trust Services Criteria) əsasında qiymətləndirir: Təhlükəsizlik, Əlçatanlıq, Emal Bütövlüyü, Məxfilik və Gizlilik.
+
+SOC 2 Type II: Xüsusilə vacibdir. Bu, nəzarətlərin sadəcə dizaynını deyil, xarici auditor tərəfindən müəyyən edilmiş bir müddət (məsələn, 6-12 ay) ərzində davamlı olaraq effektiv işlədiyini sübut edən hesabatdır və buna görə yüksək səviyyədə təhlükəsizlik təminatı göstərir.
+
+SOC 3: SOC 2 hesabatının daha qısa, ümumiləşdirilmiş və geniş auditoriyaya (məsələn, veb-saytda yerləşdirmək üçün) açıq olan versiyasıdır.
+
+3. Məcburi Tənzimləmələr (Qanunlar və Qaydalar)
+Bunlar seçimlər deyil, müəyyən sənayelərdə və ya regionlarda fəaliyyət göstərmək üçün mütləq riayət edilməli olan qaydalardır.
+
+PCI DSS (Payment Card Industry Data Security Standard):
+
+Kredit kartı məlumatlarını qəbul edən, işləyən, saxlayan və ya ötürən bütün şirkətlərin (onlayn mağazalar, banklar) bu məlumatları təhlükəsiz şəkildə qorumasını təmin edir.
+
+Buludda kredit kartı məlumatı saxlayırsınızsa, riayət etmək məcburidir.
+
+HIPAA (Health Insurance Portability and Accountability Act) və HITECH Act:
+
+ABŞ-da Qorunan Sağlamlıq Məlumatları (PHI - Protected Health Information) ilə işləyərkən tətbiq olunur.
+
+Xəstə məlumatlarının məxfiliyini və təhlükəsizliyini (həm kağızda, həm də rəqəmsal olaraq) təmin edir.
+
+GDPR (General Data Protection Regulation):
+
+Avropa İttifaqı (AB) sakinlərinin şəxsi məlumatlarının qorunması və məxfiliyi üçün çox sərt tələblər qoyan AB qanunudur.
+
+Tətbiqi: Təkcə AB şirkətlərinə deyil, AB sakinlərinin məlumatlarını emal edən bütün dünyadakı şirkətlərə (idarəedici/emalçı) tətbiq olunur.
+
+Qanunilik: Şəxsi məlumatların emalı yalnız məlumat subyektinin (şəxsin) açıq, məlumatlı və birmənalı razılığı ilə icazəlidir.
+
+Hüquqlar: Fiziki şəxslər öz məlumatlarını almaq ("unutdurulma" hüququ), etiraz etmək, düzəltmə/silmə tələb etmək və zərərə görə kompensasiya almaq kimi güclü hüquqlara malikdirlər.
+
+GDPR-ə əməl etməmək çox ciddi maliyyə cəzaları (məsələn, illik dünya dövriyyəsinin 4%-i) ilə nəticələnir.
+
+> [!NOTE]
+> ## 12. Cybersecurity Maturity Model Certification (CMMC)
+Cybersecurity Maturity Model Certification (CMMC) – ABŞ Müdafiə Nazirliyinin (DoD) təchizat şəbəkəsində (məsələn, hərbi podratçılar) kibertəhlükəsizlik üçün vahid və standartlaşdırılmış bir çərçivədir.
+
+Məqsədi: CMMC-nin əsas məqsədi DoD-un təchizat şəbəkəsi daxilində Federal Müqavilə Məlumatlarının (FCI) və xüsusilə həssas olan Nəzarət Edilən Təsnifləşdirilməmiş Məlumatların (CUI) qorunmasını təmin etməkdir.
+
+Bu standart, təşkilatın kibertəhlükəsizlik "yetkinliyini" bir neçə səviyyədə qiymətləndirir və bu həssas məlumatları qorumaq üçün tələb olunan proses və tədbirləri müəyyən edir.
+
+CMMC 2.0: Müasir 3 Səviyyəli Model
+CMMC-nin ilkin 5 səviyyəli versiyası (CMMC 1.0) 2021-ci ildə sadələşdirilərək CMMC 2.0 ilə əvəz olundu. Bu yeni model 3 "Yetkinlik Səviyyəsi"nə əsaslanır:
+
+Səviyyə 1 (Foundational - Əsas):
+
+Məqsəd: Yalnız Federal Müqavilə Məlumatlarının (FCI) qorunması.
+
+Tələb: Ən əsas kibertəhlükəsizlik tədbirlərini (17 nəzarət) əhatə edir ("Basic Cyber Hygiene").
+
+Qiymətləndirmə: Adətən təşkilatın özü tərəfindən illik yoxlama.
+
+Səviyyə 2 (Advanced - Qabaqcıl):
+
+Məqsəd: Həssas Nəzarət Edilən Təsnifləşdirilməmiş Məlumatların (CUI) qorunması.
+
+Tələb: Bu səviyyə birbaşa NIST 800-171 standartının tələbləri ilə (110 nəzarət) eyniləşdirilib.
+
+Qiymətləndirmə: Həssas məlumatlarla işləyən şirkətlər üçün 3 ildən bir kənar (üçüncü tərəf) auditor tərəfindən yoxlama tələb olunur.
+
+Səviyyə 3 (Expert - Ekspert):
+
+Məqsəd: Ən yüksək prioritetli, həyati əhəmiyyətli proqramlar və CUI məlumatlarının qorunması.
+
+Tələb: NIST 800-171-ə əlavə olaraq, daha qabaqcıl və proaktiv təhlükəsizlik tədbirləri (NIST 800-172-dən) tələb olunur.
+
+Qiymətləndirmə: Hökumət tərəfindən idarə olunan (DoD tərəfindən) 3 illik yoxlamalar.
+
+Vacib Qeyd: CMMC 1.0 (Sizin Təqdim Etdiyiniz 5 Səviyyə)
+Sizin qeyd etdiyiniz 5 səviyyəli model CMMC 1.0-a aiddir və CMMC 2.0-da aşağıdakı kimi sadələşdirilmişdir:
+
+CMMC 1.0 Level 1 (Basic Cyber Hygiene): CMMC 2.0-da Səviyyə 1 (Foundational) oldu.
+
+CMMC 1.0 Level 2 (Intermediate): Ləğv edildi.
+
+CMMC 1.0 Level 3 (Good Cyber Hygiene): CMMC 2.0-da Səviyyə 2 (Advanced) oldu.
+
+CMMC 1.0 Level 4 (Proactive): Ləğv edildi.
+
+CMMC 1.0 Level 5 (Advanced/Progressive): CMMC 2.0-da Səviyyə 3 (Expert) oldu.
+
+Bulud Təhlükəsizliyi Konteksti
+CMMC-nin bulud təhlükəsizliyinə birbaşa təsiri var. Əgər DoD podratçısı CUI məlumatlarını saxlamaq, emal etmək və ya ötürmək üçün ictimai bulud xidmətindən (məsələn, AWS, Azure, Google Cloud) istifadə edirsə, həmin bulud mühitinin özü də podratçının tələb olunan CMMC səviyyəsinə (məsələn, Səviyyə 2) uyğun olmalıdır. Bu səbəbdən bulud provayderləri DoD podratçılarına xidmət göstərmək üçün xüsusi, yüksək təhlükəsizlikli mühitlər (məsələn, Azure Government, AWS GovCloud) təklif edirlər.
+
+> [!NOTE]
+> ## 13. NIS və NIS 2 Direktivləri (Şəbəkə və İnformasiya Təhlükəsizliyi)
+Sizin təsvir etdiyiniz çərçivə, Avropa İttifaqının (Aİ) NIS (Network and Information Systems) Direktivı kimi tanınan fundamental kiber-təhlükəsizlik qanunvericiliyidir.
+
+NIS Direktivinin Məqsədi
+NIS Direktivinin əsas məqsədi, Aİ daxilində şəbəkə və informasiya sistemlərinin davamlılığını artırmaq üçün ümumi bir çərçivə yaratmaqdır. Bu çərçivə, sistemlərin saxlanılan, ötürülən və ya emal olunan məlumatlarının, həmçinin bu sistemlər vasitəsilə təqdim olunan xidmətlərinin əlçatanlığına, etibarlılığına, bütövlüyünə və məxfiliyinə zərər vura biləcək fəaliyyətlərə (məsələn, kiberhücumlara) qarşı dayanıqlığı təmin edir.
+
+Kimlərə Tətbiq Olunur?
+Direktiv Aİ üzv dövlətlərini bu qaydaları milli qanunlarına daxil etməyə məcbur edir və əsasən iki tip təşkilatı hədəf alır:
+
+OES (Operators of Essential Services) - Vacib Xidmət Operatorları: Cəmiyyətin fəaliyyəti üçün kritik olan sektorlar (məsələn, enerji, su, nəqliyyat, səhiyyə, bankçılıq).
+
+DSPs (Digital Service Providers) - Rəqəmsal Xidmət Təminatçıları:
+
+Bulud Təhlükəsizliyi ilə Əlaqəsi
+Bulud təhlükəsizliyi imtahanı üçün bu direktivin əhəmiyyəti onun ikinci qrupa, yəni Rəqəmsal Xidmət Təminatçılarına (DSPs) birbaşa tətbiq olunmasıdır. DSP-lər kateqoriyasına bunlar daxildir:
+
+Onlayn bazarlar
+
+Axtarış sistemləri
+
+Bulud hesablama xidmətləri (IaaS, PaaS, SaaS provayderləri)
+
+Beləliklə, Avropada fəaliyyət göstərən hər hansı bir bulud provayderi (AWS, Azure, Google Cloud və yerli provayderlər) NIS Direktivinin tələblərinə tabedir.
+
+Əsas Tələblər
+Direktivin milli qanunlara daxil edilməli olan əsas tələbləri (sizin də qeyd etdiyiniz kimi) bulud provayderləri də daxil olmaqla, bu təşkilatlardan aşağıdakıları tələb edir:
+
+Texniki Tədbirlər: Öz fəaliyyətlərində istifadə olunan şəbəkə və informasiya sistemlərinin təhlükəsizliyinə risk yaradan halları idarə etmək üçün adekvat texniki və təşkilati tədbirlər görmək (məsələn, risk analizi, şifrələmə, girişə nəzarət).
+
+Hadisələrin İdarə Edilməsi: Vacib xidmətlərin göstərilməsi üçün istifadə olunan sistemlərin təhlükəsizliyinə təsir edən hadisələrin (insidentlərin) qarşısını almaq və onların təsirini minimuma endirmək, həmçinin xidmətlərin davamlılığını (Business Continuity) təmin etmək.
+
+Məlumatlandırma (Notification): Təqdim etdikləri vacib xidmətlərin davamlılığına ciddi təsir göstərən hadisələr (məlumat pozuntuları, xidmət kəsilməsi) barədə aidiyyəti milli orqanlara (məsələn, CERT) gecikmədən məlumat vermək.
+
+Audit və Qiymətləndirmə: Öz şəbəkə və informasiya sistemlərinin təhlükəsizliyini qiymətləndirmək üçün səlahiyyətli orqanlara tələb olunan məlumatı təqdim etmək.
+
+Sübut (Compliance): Təhlükəsizlik siyasətlərinin effektiv şəkildə tətbiq olunduğunu sübut edən sənədləri, məsələn, təhlükəsizlik auditinin nəticələrini təqdim etmək.
+
+Vacib Yeniləmə: NIS 2 Direktivı (2023)
+Qeyd etmək çox vacibdir ki, 2016-cı ilin orijinal NIS Direktivı (NIS 1) 2023-cü ilin yanvarında qüvvəyə minən NIS 2 Direktivı ilə əvəz olunub. NIS 2 orijinal direktivi daha da sərtləşdirir:
+
+Daha Geniş Əhatə: Daha çox sektoru (məsələn, ictimai idarəetmə, rəqəmsal infrastruktur) əhatə edir.
+
+Daha Sərt Tələblər: Təhlükəsizlik tədbirləri və hesabatlılıq üçün daha konkret tələblər qoyur.
+
+Daha Ciddi Cəzalar: Qaydalara əməl etməyənlər üçün GDPR-a bənzər yüksək maliyyə cəzaları tətbiq edir.
+
+Beləliklə, NIS 2 Avropadakı bulud provayderləri üçün təhlükəsizlik standartını daha da yüksəltmişdir.
+
